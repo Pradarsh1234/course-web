@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Website</title>
+  <style>
+    body {
+      background-image: url(ml-background-image3.jpg);
+      background-attachment: fixed;
+      background-size: auto;
+      font-family: roboto,arial;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: none;
+      color: rgb(71, 70, 70);
+      text-align: center;
+      padding: 10px;
+    }
+
+    main {
+      background-size: auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      padding-bottom: 100px;
+    }
+
+    .left-section {
+      width: 20%;
+      background-color: lightgrey;
+      height: 500px;
+    }
+
+    .right-section{
+        width: 90%;
+        margin-left: 10px;
+    }
+
+    .container {
+      background-color: #333;
+      border: 1px solid grey;
+      color: rgb(177, 176, 176);
+      border-radius: 100px 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .container h2 {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .container-content {
+      display: none;
+    }
+
+    .container h2::after {
+      content: "▶";
+      margin-left: 5px;
+      transition: transform 0.3s;
+    }
+
+    .container.open h2::after {
+      transform: rotate(90deg);
+    }
+
+    .container.open .container-content {
+      display: block;
+    }
+
+    .links-container {
+      margin-top: 10px;
+      display: none;
+    }
+    a{
+      text-decoration: none;
+      color: rgb(243, 243, 130);
+    }
+    h2{
+      color: rgb(228, 226, 226);
+    }
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Machine Learning <br> Reference</h1>
+  </header>
+
+  <main class="main">
+    <div class="left-section">
+      <!-- Left Section Content Goes Here -->
+      <p>This is the left section.</p>
+    </div>
+
+    <div class="right-section">
+      <div class="container" id="youtube-container">
+        <h2 onclick="toggleContainer('youtube-container')">YouTube Videos</h2>
+        <div class="container-content">
+          <div class="links-container" id="youtube-links">
+            <a href="https://www.youtube.com/watch?v=OGxgnH8y2NM&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=1">Practical Machine Learning Tutorial with Python Intro p.1</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=JcI5Vnw0b2c&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=2">Regression Intro - Practical Machine Learning Tutorial with Python p.2</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=lN5jesocJjk&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=3"> Regression Features and Labels - Practical Machine Learning Tutorial with Python p.3</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=r4mwkS2T9aI&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=4"> Regression Training and Testing - Practical Machine Learning Tutorial with Python p.4</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=QLVMqwpOLPk&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=5"> Regression Training and Testing - Practical Machine Learning Tutorial with Python p.5</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=za5s7RB_VLw&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=6"> Pickling and Scaling - Practical Machine Learning Tutorial with Python p.6</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=V59bYfIomVk&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=7"> Regression How it Works - Practical Machine Learning Tutorial with Python p.7</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=SvmueyhSkgQ&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=8">How to program the Best Fit Slope - Practical Machine Learning Tutorial with Python p.8</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=KLGfMGsgP34&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=9">How to program the Best Fit Line - Practical Machine Learning Tutorial with Python p.9</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=-fgYp74SNtk&list=PLQVvvaa0QuDfKTOs3Keq_kaG2P55YRn5v&index=10"> R Squared Theory - Practical Machine Learning Tutorial with Python p.10</a>
+        </div>
+        <h3>Google Developers - "Machine Learning Recipes with Josh Gordon" series:</h3>
+        <div id="tutorial-chapters">
+            <a href="https://www.youtube.com/watch?v=cKxRvEZd3Mw&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal">Hello World - Machine Learning Recipes #1</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=tNa99PG8hR8&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=2">Visualizing a Decision Tree - Machine Learning Recipes #2</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=N9fDIAflCMY&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=3">What Makes a Good Feature? - Machine Learning Recipes #3</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=84gqSbLcBFE&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=4">Let’s Write a Pipeline - Machine Learning Recipes #4</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=AoeEHqVSNOw&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=5">Writing Our First Classifier - Machine Learning Recipes #5</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=cSKfRcEDGUs&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=6">How to train an Image Classifier with TensorFlow for Poets - Machine Learning Recipes #6</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=Gj0iyo265bc&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=7">Classifying Handwritten Digits with TF.Learn - Machine Learning Recipes #7</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=LDRbO9a6XPU&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=8">Let’s Write a Decision Tree Classifier from Scratch - Machine Learning Recipes #8</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=d12ra3b_M-0&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=9">Intro to Feature Engineering with TensorFlow - Machine Learning Recipes #9</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=TF1yh5PKaqI&list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&index=10">Getting Started with Weka - Machine Learning Recipes #10</a>           
+        </div>
+        <h3>StatQuest with Josh Starmer:</h3>
+        <div id="tutorial-chapters">
+            <a href="https://www.youtube.com/watch?v=aircAruvnKk">Chapter 1</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=IHZwWFHWa-w">Chapter 2</a>
+        </div>
+        <h3>"DATA SCIENCES" series:</h3>
+        <div id="DATA SCIENCE">
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=JL_grPUnXzY&list=PLeo1K3hjS3us_ELKYSj_Fth2tIEkdKXvV">What is Data Science? | Free Data Science Course | Data Science for Beginners | codebasics</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=eaFaD_IBYW4&list=PLeo1K3hjS3us_ELKYSj_Fth2tIEkdKXvV&index=2">Data Science Roadmap 2023 | Learn Data Science Skills in 6 Months</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=npgbI8KYvN8&list=PLeo1K3hjS3us_ELKYSj_Fth2tIEkdKXvV&index=3">Business Math & Statistics Using Excel For Data Analysts and Data Scientists</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=Rm0xH2Vpfi0&list=PLeo1K3hjS3us_ELKYSj_Fth2tIEkdKXvV&index=4">SQL Tutorial For Beginners | MySQL Tutorial</a>
+            <br> <!-- Add a line break to place Chapter 2 on a new line -->
+            <a href="https://www.youtube.com/watch?v=6lBPM-MiGNI&list=PLeo1K3hjS3us_ELKYSj_Fth2tIEkdKXvV&index=5">Install python on windows [Python 3 Programming Tutorials]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container" id="ai-tools-container">
+        <h2 onclick="toggleContainer('ai-tools-container')">AI Tools</h2>
+        <div class="container-content">
+          <!-- AI Tools Content Goes Here -->
+          <a href="https://www.tensorflow.org/">TensorFlow</a>
+            <p>
+              <ul>
+                <li>Developed by Google, TensorFlow is an open-source machine learning framework widely used for building and training deep learning models.</li>
+
+                </ul>
+            </p>
+
+            <a href="https://pytorch.org/">PyTorch</a>
+            <p>
+              <ul>
+                <li>PyTorch is an open-source machine learning library maintained by Facebook. It is known for its dynamic computation graph, making it particularly popular for research.</li>
+
+              </ul>
+            </p>
+
+            <a href="https://scikit-learn.org/stable/">Scikit-learn</a>
+            <p>
+              <ul>
+                <li>Scikit-learn is a simple and efficient tool for data analysis and machine learning. It provides simple and efficient tools for data mining and data analysis, built on NumPy, SciPy, and Matplotlib.
+                </li>
+
+              </ul>
+            </p>
+
+            <a href="https://scikit-learn.org/stable/">Scikit-learn</a>
+            <p>
+              <ul>
+                <li>Scikit-learn is a simple and efficient tool for data analysis and machine learning. It provides simple and efficient tools for data mining and data analysis, built on NumPy, SciPy, and Matplotlib.
+                </li>
+
+              </ul>
+            </p>
+
+            <a href="https://keras.io/">Keras</a>
+            <p>
+              <ul>
+                <li>Keras is an open-source deep learning API written in Python. It serves as a high-level interface for neural networks and can run on top of TensorFlow, Theano, or Microsoft Cognitive Toolkit.
+                </li>
+
+              </ul>
+            </p>
+
+            <a href="https://pandas.pydata.org/">Pandas</a>
+            <p>
+              <ul>
+                <li>While not exclusively an AI tool, Pandas is a powerful Python library for data manipulation and analysis, making it essential for preprocessing and cleaning data before machine learning tasks.
+                </li>
+
+              </ul>
+            </p>
+
+            <a href="https://jupyter.org/">Jupyter Notebooks</a>
+            <p>
+              <ul>
+                <li>Jupyter Notebooks are an open-source web application that allows you to create and share documents that contain live code, equations, visualizations, and narrative text, making it great for interactive machine learning development.
+                </li>
+
+              </ul>
+            </p>
+
+            <a href="https://www.ibm.com/products/watson-studio">IBM Watson Studio</a>
+            <p>
+              <ul>
+                <li>IBM Watson Studio is a cloud-based platform that provides a suite of tools for data scientists, developers, and domain experts to collaboratively and easily work with data and use machine learning models
+                </li>
+
+              </ul>
+            </p>
+
+            <a href="https://azure.microsoft.com/en-in/products/machine-learning">Microsoft Azure Machine Learning</a>
+            <p>
+              <ul>
+                <li>Azure Machine Learning is a cloud-based service for building, training, and deploying machine learning models. It provides a collaborative environment and supports various open-source frameworks.
+                </li>
+
+              </ul>
+            </p>
+
+        </div>
+      </div>
+
+      <div class="container" id="notes-container">
+        <h2 onclick="toggleContainer('notes-container')">Datasets</h2>
+          <div class="container-content">
+            <!-- Notes Content Goes Here -->
+            <a href="https://www.kaggle.com/datasets?fileType=csv">Kaggle</a>
+              <p>
+                <ul>
+                  <li>Kaggle is a popular platform for data science and machine learning competitions. It also hosts a vast collection of datasets across various domains, contributed by the community.
+                  </li>
+                </ul>
+              </p>
+
+              <a href="https://archive.ics.uci.edu/">UCI Machine Learning Repository</a>
+              <p>
+                <ul>
+                  <li>The UCI Machine Learning Repository is a collection of databases, domain theories, and datasets widely used by the machine learning community. It covers diverse topics and is a reliable resource for research and experimentation.
+                  </li>
+                </ul>
+              </p>
+
+              <a href="aws.amazon.com">AWS Public Datasets</a>
+              <p>
+                <ul>
+                  <li>Amazon Web Services (AWS) hosts a variety of public datasets that can be used for machine learning projects. These datasets cover domains such as genomics, satellite imagery, and more.
+                  </li>
+                </ul>
+              </p>
+
+              <a href="https://datasetsearch.research.google.com/">Google Dataset Search</a>
+              <p>
+                <ul>
+                  <li>Google Dataset Search is a tool that enables the discovery of datasets stored across the web. It provides access to a wide range of datasets, including those related to machine learning.
+                  </li>
+                </ul>
+              </p>
+
+              <a href="https://github.com/awesomedata/awesome-public-datasets">Open Data on GitHub</a>
+              <p>
+                <ul>
+                  <li>GitHub hosts a curated list of awesome public datasets across different domains. This repository is a collection of links to various datasets that you can explore and use for machine learning.
+                  </li>
+                </ul>
+              </p>
+          </div>
+      </div>
+
+      <div class="container" id="data-container">
+        <h2 onclick="toggleContainer('data-container')">Notes For Machine-learning</h2>
+        <div class="container-content">
+          <!-- Notes Content Goes Here -->
+          <p><h3>1. Introduction to Machine Learning:</h3>
+            Definition:<br><br>
+            
+            Machine learning is a subset of artificial intelligence that focuses on developing algorithms and statistical models that enable computers to perform tasks without explicit programming.<br><br>
+            Types of Machine Learning:<br><br>
+            
+            Supervised Learning<br>
+            Unsupervised Learning<br>
+            Reinforcement Learning<br><br>
+            <h3>2. Supervised Learning:</h3>
+            Definition:<br><br>
+            
+            Supervised learning involves training a model on a labeled dataset, where the algorithm learns from input-output pairs to make predictions or classifications on new, unseen data.<br><br>
+            Common Algorithms:<br><br>
+            
+            Linear Regression<br>
+            Support Vector Machines<br>
+            Decision Trees<br>
+            Random Forest<br><br>
+            <h3>3. Unsupervised Learning:</h3>
+            Definition:<br><br>
+            
+            Unsupervised learning deals with unlabeled data. The algorithm identifies patterns and relationships within the data without predefined output labels.<br><br>
+            Common Algorithms:<br><br>
+            
+            K-Means Clustering<br>
+            Hierarchical Clustering<br>
+            Principal Component Analysis (PCA)<br><br>
+            <h3>4. Reinforcement Learning:</h3>
+            Definition:<br><br>
+            
+            Reinforcement learning involves an agent that learns to make decisions by interacting with an environment. The agent receives feedback in the form of rewards or punishments for its actions.<br><br>
+            Key Concepts:<br><br>
+            
+            Agent<br>
+            Environment<br>
+            Rewards<br>
+            <h3>5. Model Evaluation and Metrics:</h3>
+            Train-Test Split:<br><br>
+            
+            Dividing the dataset into training and testing sets to assess a model's performance on unseen data.
+            Common Metrics:<br><br>
+            
+            Accuracy<br>
+            Precision<br>
+            Recall<br>
+            F1 Score<br><br>
+            <h3>6. Feature Engineering:</h3>
+            Definition:<br><br>
+            
+            Feature engineering involves selecting, transforming, and creating relevant features from raw data to improve the performance of machine learning models.<br><br>
+            Techniques:<br><br>
+            
+            One-Hot Encoding<br>
+            Scaling<br>
+            Polynomial Features<br><br>
+            <h3>7. Overfitting and Underfitting:</h3>
+            Overfitting:<br><br>
+            
+            Occurs when a model learns the training data too well, capturing noise and producing poor generalization on new data.<br><br>
+            Underfitting:<br><br>
+            
+            Occurs when a model is too simple to capture the underlying patterns in the data, resulting in poor performance.<br><br>
+            <h3>8. Cross-Validation:</h3>
+            Definition:<br><br>
+            
+            Cross-validation is a technique used to assess a model's performance by splitting the dataset into multiple subsets and training the model on different combinations of these subsets.<br><br>
+            Types:<br><br>
+            
+            k-Fold Cross-Validation<br>
+            Leave-One-Out Cross-Validation<br><br>
+            </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    function toggleContainer(containerId) {
+      var container = document.getElementById(containerId);
+      var linksContainer = container.querySelector('.links-container');
+
+      container.classList.toggle('open');
+      linksContainer.style.display = linksContainer.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+</body>
+
+</html>

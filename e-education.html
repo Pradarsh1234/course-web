@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url(background-img.avif);
+      background-attachment: fixed;
+      font-family: roboto, arial;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      height: 150px;
+      margin-bottom: 60px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    .course {
+      background-color: #fff;
+      border: 1px solid grey;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    .image {
+        height: 100px;
+    }
+    .div-image {
+        display: inline-block;
+    }
+    .course-preview {
+        display: inline-block;
+        margin-left: 20px;
+        vertical-align: top;
+    }
+    .text-para {
+        color: white;
+    }
+    .c1 {
+        background-image: url(ml-background-image.jpg);
+    }
+    .c2 {
+        background-image: url(iot-background-image.jpg);
+        background-size: cover;
+    }
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social-icons img {
+        width: 30px;
+        margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Course Catalog</h1>
+  </header>
+
+  <section>
+    <div class="course c1">
+      <div class="div-image"><img class="image" src="ml.jpg" alt="Machine Learning Image"></div>
+        <div class="course-preview">
+           <h2>Machine Learning</h2>
+           <p class="text-para">Explore the exciting field of machine learning and its applications.</p>
+            <ul>
+                <!-- <li><a href="#">Introduction to Machine Learning</a></li>
+                <li><a href="#">Supervised Learning</a></li>
+                <li><a href="#">Unsupervised Learning</a></li>-->
+                <!-- Add more machine learning courses as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="course c2">
+      <div class="div-image"><img class="image" src="iot-image.png" alt="IoT Image"></div>
+        <div class="course-preview">
+            <h2>Internet of Things (IoT)</h2>
+            <p>Learn about the interconnected world of IoT and its impact on technology.</p>
+            <ul>
+                <!--<li><a href="#">Introduction to IoT</a></li>
+                <li><a href="#">IoT Protocols</a></li>
+                <li><a href="#">IoT Security</a></li>-->
+                <!-- Add more IoT courses as needed -->
+            </ul>
+      </div>
+    </div>
+
+    <!-- Add more courses here -->
+
+  </section>
+
+  <footer>
+    <div class="social-icons">
+        <img src="instagram-logo.png" alt="Instagram">
+        <img src="facebook-logo.png" alt="Facebook">
+        <img src="twitter-logo.png" alt="Twitter">
+    </div>
+    <p>Contact us: example@email.com</p>
+  </footer>
+
+</body>
+
+</html>
